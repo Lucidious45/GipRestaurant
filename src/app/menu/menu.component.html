@@ -1,10 +1,24 @@
-<p>
-  menu works!
-</p>
-
+<!-- 
 <div class="MenuBox">
-  START MENU
-<div>Voorgerecthen</div>
+<div>Voorgerechten
+  <div>Soep</div>
+  <div>Tabouleh</div>
+  <div>Hummus</div>
 
+</div>
+
+
+</div>
+ -->
+ 
+<div class="row">
+  <div class="col-sm-4" *ngFor="let product of menu">
+    <img [src]="product.imgUrls[0]" alt="" >
+    <a [routerLink]="['/menu', product.id]"><h3 class="card-title text-center">
+      {{product.name}}
+    </h3>
+    </a>
+    <!-- <button class="btn btn-info">In winkelkar</button> -->
+  </div>
 </div>
 
