@@ -10,6 +10,8 @@ import { ReserverenComponent } from './reserveren/reserveren.component';
 import { AdminComponent } from './admin/admin.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CartComponent } from './cart/cart.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [									
@@ -22,7 +24,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
       ReserverenComponent,
       ReserverenComponent,
       AdminComponent,
-      AboutUsComponent
+      AboutUsComponent,
+      CartComponent,
+      ProductComponent
    ],
   imports: [
     BrowserModule,
