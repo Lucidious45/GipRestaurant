@@ -6,4 +6,5 @@ export class Product {
     this.price = price;
     this.imgUrls = imgUrls;
   }
+  
 }

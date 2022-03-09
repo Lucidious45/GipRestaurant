@@ -9,8 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-product:Product;
-
+product:Product | undefined
   constructor(private ProductService: ProductService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {

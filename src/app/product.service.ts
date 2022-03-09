@@ -11,7 +11,7 @@ export class ProductService {
       'Soep van de week',
       'Onze seizoenlijke soep met verse ingredienten.',
       7.99,
-      ['', '', '']
+      ['assets/Tabbouleh1.jpg', '', '']
     ),
     new Product(
       2,
