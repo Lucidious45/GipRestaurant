@@ -13,7 +13,7 @@ product:Product | undefined
   constructor(private ProductService: ProductService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.params['id'];
+    const id = +this.route.snapshot.params['id'];
     this.product = this.ProductService.getProduct(id)
   }
 

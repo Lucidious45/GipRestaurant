@@ -1,1 +1,7 @@
-<p>product works!</p>
+<div class="row">
+<div class="col-sm-12 col md-2">
+  <div class="images" *ngFor="let image of product?.imgUrls">
+      <img [src]="image">
+  </div>
+</div>
+</div>

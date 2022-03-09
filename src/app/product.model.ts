@@ -4,7 +4,7 @@ export class Product {
     this.name = name;
     this.desc = desc;
     this.price = price;
-    this.imgUrls = imgUrls;
+    this.imgUrls  = imgUrls ;
   }
   
 }
