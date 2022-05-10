@@ -8,10 +8,10 @@ export class ProductService {
   menu: Product[] = [
     new Product(
       1,
-      'Soep van de week',
-      'Onze seizoenlijke soep met verse ingredienten.',
-      7.99,
-      ['']
+      'Falafel',
+      'Falafel gereserveerd met een Lebanees brood en een portie hummus',
+      12.00,
+      ['', '', '']
     ),
     new Product(
       2,
@@ -43,11 +43,86 @@ export class ProductService {
     ),
     new Product(
       6,
-      'Falafel',
-      'Falafel gereserveerd met een Lebanees brood en een portie hummus',
+      'Kefta',
+      'Gegrild lamsgehakt (3 spiezen)',
       12.00,
       ['', '', '']
+      
+    ),
+    new Product(
+      6,
+      'Kefta',
+      'Gegrild lamsgehakt (3 spiezen)',
+      12.00,
+      ['', '', '']
+      
+    ),
+    new Product(
+      7,
+      'Jawaneh',
+      'Gegrilde Kippenvleugels',
+      13.00,
+      ['', '', '']
+      
+    ),
+    new Product(
+      8,
+      'Lamskotelet',
+      'Gegrilde lamskotelet',
+      20.00,
+      ['', '', '']
+      
+    ),
+    new Product(
+      9,
+      'Kibbi mishwiyye',
+      '2 stukjes Kibbi Mishwiyye bulgur',
+      14.00,
+      ['', '', '']
+      
+    ),
+    new Product(
+      10,
+      'Vegan Grill',
+      'Gegrilde  tomaat, ui, aubergine en paprika',
+      8.00,
+      ['', '', '']
+      
+    ),
+    new Product(
+      11,
+      'Baklava',
+      '2 stukjes Kibbi Mishwiyye bulgur',
+      14.00,
+      ['', '', '']
+      
+    ),
+    new Product(
+      12,
+      'Kibbi mishwiyye',
+      '4 stukjes Baklava',
+      14.00,
+      ['', '', '']
+      
+    ),
+    new Product(
+      13,
+      'Palmyra Petitfour',
+      '5 stukjes verse Syrische petitfour',
+      6.00,
+      ['', '', '']
+      
+    ),
+    new Product(
+      14,
+      'Syrische zwarte thee',
+      '2 stukjes Kibbi Mishwiyye bulgur',
+      14.00,
+      ['', '', '']
+      
     )
+    
+    
 
   ]
 

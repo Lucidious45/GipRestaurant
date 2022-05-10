@@ -1,14 +1,20 @@
-<!doctype html>
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <div id="MenuBox">
+     <h1 text-align: center >Voorgerechten</h1> 
+  
+  <div class="row">
+    <div class="container" *ngFor="let product of menu">
+      <div class="card">
+        
+      <div class="FoodBox"><img [src]="product.imgUrls[0]" alt="" class="thumbnail" style="width:100%" ></div>
+      <h3 class="card-title text-center">
+        {{product.name}}
+      </h3>
+       <button class="btn btn-info">In Winkelmandje</button>  
 
-  <title>Takeaway</title>
-</head>
+       
+      </div>
+    </div>
+  </div>
 
-<body>
-  <!-- your content here... -->
-</body>
-</html>
+  <app-footer></app-footer>
