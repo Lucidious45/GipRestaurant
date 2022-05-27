@@ -1,8 +1,14 @@
+import { ProductsComponent } from './admin/products/products.component';
+import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
+import { LoginComponent } from './login/login.component';
+import { OrderSuccessComponent } from './order-success/order-success.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { CheckOutComponent } from './check-out/check-out.component';
+import { CartComponent } from './cart/cart.component';
 import { ProductComponent } from './product/product.component';
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
-import { AdminComponent } from './admin/admin.component';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { MenuComponent } from './menu/menu.component';
@@ -11,14 +17,20 @@ import { TakeawayComponent } from './takeaway/takeaway.component';
 
 const routes: Routes = [
   {path: "home", component: AppComponent},
-  {path: "admin", component: AdminComponent},
   {path: "contact", component: ContactComponent},
   {path: "aboutus", component: AboutUsComponent},
   {path: "menu", component: MenuComponent},
   {path: "reserveren", component: ReserverenComponent},
   {path: "takeaway", component: TakeawayComponent},
+  {path: "shopping-cart", component: CartComponent},
+  {path: 'menu/:id', component:ProductComponent},
+  {path: "check-out", component: CheckOutComponent},
+  {path: "navbar", component: NavbarComponent},
+  {path: "order-succes", component: OrderSuccessComponent},
+  {path: "login", component: LoginComponent},
+  {path: "admin/orders", component: AdminOrdersComponent},
+  {path: "admin/products", component: ProductsComponent},
 
-  {path: 'menu/:id', component:ProductComponent} 
 
 ];
 

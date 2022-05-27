@@ -37,7 +37,6 @@
     "@angular-devkit/build-angular": "13.2.0",
     "@angular/cli": "13.2.0",
     "@angular/compiler-cli": "13.2.0",
-    "@nrwl/nx-cloud": {},
     "@nrwl/workspace": "14.1.7",
     "@types/jasmine": "~3.10.0",
     "@types/node": "12.11.1",
@@ -50,5 +49,17 @@
     "nx": "14.1.7",
     "tslib": "2.3.1",
     "typescript": "~4.5.2"
-  }
+  },
+  "description": "GIP",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucidious45/GipRestaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lucidious45/GipRestaurant/issues"
+  },
+  "homepage": "https://github.com/Lucidious45/GipRestaurant#readme"
 }
