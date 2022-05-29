@@ -15,6 +15,7 @@ import { ReserverenComponent } from './reserveren/reserveren.component';
 import { TakeawayComponent } from './takeaway/takeaway.component';
 import { MyordersComponent } from './myorders/myorders.component';
 import { LoginComponent } from './login/login.component';
+import { AuthGuardService } from './auth-guard.service';
 
 
 const routes: Routes = [
@@ -31,7 +32,7 @@ const routes: Routes = [
   {path: "order-succes", component: OrderSuccessComponent},
   {path: "admin/orders", component: AdminOrdersComponent},
   {path: "admin/products", component: ProductsComponent},
-  {path: "myorders", component: MyordersComponent}
+  {path: "myorders", component: MyordersComponent},
 
 
 
