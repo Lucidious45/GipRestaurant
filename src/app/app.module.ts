@@ -1,4 +1,4 @@
-import { AuthGuardService } from './auth-guard.service';
+import { AuthService } from './auth.service';
 import { environment } from './../environments/environment';
 import { NgModule } from '@angular/core';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
@@ -9,7 +9,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
-
 
 import { AppComponent } from './app.component';
 import { TakeawayComponent } from './takeaway/takeaway.component';
@@ -28,9 +27,7 @@ import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.componen
 import { LoginComponent } from './login/login.component';
 import { MyordersComponent } from './myorders/myorders.component';
 
-/* import { AngularFireModule } from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireAuthModule } from 'angularfire2/auth'; */
+
 
 
 @NgModule({
@@ -66,7 +63,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth'; */
     //AngularFireModule.initializeApp(environment.firebase) */
   ],
   providers: [
-    AuthGuardService,
+    AuthService,
+
     
   ],
   bootstrap: [AppComponent]

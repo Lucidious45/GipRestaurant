@@ -16,6 +16,7 @@ import { TakeawayComponent } from './takeaway/takeaway.component';
 import { MyordersComponent } from './myorders/myorders.component';
 import { LoginComponent } from './login/login.component';
 
+
 const routes: Routes = [
   {path: "home", component: AppComponent},
   {path: "contact", component: ContactComponent},
@@ -31,6 +32,7 @@ const routes: Routes = [
   {path: "admin/orders", component: AdminOrdersComponent},
   {path: "admin/products", component: ProductsComponent},
   {path: "myorders", component: MyordersComponent}
+
 
 
 ];
