@@ -16,7 +16,7 @@ import { map } from 'rxjs';
          if (user) return true;
          console.log("checking auth")
 
-         this.router.navigate(['']);
+        this.router.navigate(['']);
        return false;
        }));
      }
