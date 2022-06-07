@@ -16,6 +16,7 @@ import { TakeawayComponent } from './takeaway/takeaway.component';
 import { MyordersComponent } from './myorders/myorders.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuardService } from './auth-guard.service';
+import { ProductFormComponent } from './product-form/product-form.component';
 
 
 const routes: Routes = [
@@ -32,13 +33,15 @@ const routes: Routes = [
   {path: "order-succes", component: OrderSuccessComponent},
   {path: "admin/orders", component: AdminOrdersComponent},
   {path: "admin/products", component: ProductsComponent},
-  {path: "myorders", component: MyordersComponent, canActivate: [AuthGuardService]},
+  {path: "myorders", component: MyordersComponent},
+  {path: "admin/products/productform", component: ProductFormComponent},
 
 
 
 ];
 
 @NgModule({
+  declarations:[ProductsComponent],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
