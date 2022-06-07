@@ -32,7 +32,7 @@ const routes: Routes = [
   {path: "order-succes", component: OrderSuccessComponent},
   {path: "admin/orders", component: AdminOrdersComponent},
   {path: "admin/products", component: ProductsComponent},
-  {path: "myorders", component: MyordersComponent},
+  {path: "myorders", component: MyordersComponent, canActivate: [AuthGuardService]},
 
 
 
