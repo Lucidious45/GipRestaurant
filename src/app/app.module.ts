@@ -26,6 +26,7 @@ import { LoginComponent } from './login/login.component';
 import { MyordersComponent } from './myorders/myorders.component';
 import { AuthService } from './auth.service';
 import { AuthGuardService } from './auth-guard.service';
+import { ProductFormComponent } from './product-form/product-form.component';
 
 
 
@@ -49,6 +50,7 @@ import { AuthGuardService } from './auth-guard.service';
       OrderSuccessComponent,
       MyordersComponent,
       LoginComponent,
+      ProductFormComponent,
       
    ],
   imports: [
@@ -62,6 +64,15 @@ import { AuthGuardService } from './auth-guard.service';
     AngularFireAuthModule,
     //AngularFireModule.initializeApp(environment.firebase) */
   ],
+
+
+
+ 
+  
+  
+  
+
+
   providers: [
     AuthService,
     AuthGuardService,
