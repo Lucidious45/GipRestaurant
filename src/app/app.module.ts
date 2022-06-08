@@ -27,6 +27,7 @@ import { MyordersComponent } from './myorders/myorders.component';
 import { AuthService } from './auth.service';
 import { AuthGuardService } from './auth-guard.service';
 import { ProductFormComponent } from './product-form/product-form.component';
+import { CategoryService } from './category.service';
 
 
 
@@ -67,16 +68,10 @@ import { ProductFormComponent } from './product-form/product-form.component';
 
 
 
- 
-  
-  
-  
-
-
   providers: [
     AuthService,
     AuthGuardService,
-
+    CategoryService,
     
   ],
   bootstrap: [AppComponent]
