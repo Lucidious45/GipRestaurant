@@ -1,5 +1,7 @@
+import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from 'app/category.service';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 @Component({
   selector: 'app-product-form',
@@ -8,13 +10,18 @@ import { CategoryService } from 'app/category.service';
 })
 export class ProductFormComponent implements OnInit {
 
-  categories$: any;
+  
+  categories$: Observable<any[]>;
 
-  constructor(categoryService: CategoryService) { 
-    this.categories$ = categoryService.GetCategories();
+  constructor(categoryService: CategoryService, db: AngularFireDatabase) { 
+    this.categories$ = db.list('categories').valueChanges();
   }
 
   ngOnInit(): void {
   }
 
 }
+
+
+
+

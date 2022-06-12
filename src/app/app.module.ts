@@ -1,3 +1,4 @@
+import { initializeApp } from 'firebase/app';
 import { environment } from './../environments/environment';
 import { NgModule } from '@angular/core';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
@@ -28,6 +29,9 @@ import { AuthService } from './auth.service';
 import { AuthGuardService } from './auth-guard.service';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { CategoryService } from './category.service';
+import { provideFirebaseApp } from '@angular/fire/app';
+import { provideFirestore } from '@angular/fire/firestore';
+import { getFirestore } from 'firebase/firestore';
 
 
 
@@ -61,6 +65,9 @@ import { CategoryService } from './category.service';
     BrowserAnimationsModule,
     NgbModule,
     AngularFireModule.initializeApp(environment.firebase),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
+    
     /* AngularFireDatabaseModule,
     AngularFireAuthModule,
     //AngularFireModule.initializeApp(environment.firebase) */

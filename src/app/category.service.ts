@@ -6,16 +6,21 @@ import {
 } from '@angular/fire/compat/database';
 
 
+
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class CategoryService {
 
   constructor(private db: AngularFireDatabase) { 
-
+    const listRef = db.list('categories');
   }
 
+  
+
   GetCategories() {
-    return this.db.list('/categories');
+    return this.db.list('/categories',);
   }
 }

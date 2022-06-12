@@ -1,3 +1,5 @@
+import { CategoryService } from './../../category.service';
+import { ProductService } from './../../product.service';
 import { Component, OnInit } from '@angular/core';
 import {RouterModule} from '@angular/router';
 
@@ -10,7 +12,10 @@ import {RouterModule} from '@angular/router';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() { }
+ 
+  constructor() { 
+
+  }
 
   ngOnInit(): void {
   }
