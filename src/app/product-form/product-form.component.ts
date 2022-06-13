@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import { CategoryService } from 'app/category.service';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 
