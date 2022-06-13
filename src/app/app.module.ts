@@ -32,6 +32,7 @@ import { CategoryService } from './category.service';
 import { provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore } from '@angular/fire/firestore';
 import { getFirestore } from 'firebase/firestore';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -56,6 +57,7 @@ import { getFirestore } from 'firebase/firestore';
       MyordersComponent,
       LoginComponent,
       ProductFormComponent,
+      HomeComponent,
       
    ],
   imports: [
