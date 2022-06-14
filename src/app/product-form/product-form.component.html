@@ -1,23 +1,42 @@
 <br><br><br><br>
 <div class="row">
-    <div class="col-md-6">
-        <form >
+    <div  class="col-md-6">
+        <form #f="ngForm" (ngSubmit)="save(f.value)">
             <div class="form-group">
                 <label for="title">Title</label>
-                <input #title="" ngModelname="title" id="title" type="text" class="form-control" required>
+                <input
+                    ngModel name="title"
+                    id="title"
+                    type="text"
+                    class="form-control"
+                    #title="ngModel"
+                    required
+                />
             </div>
         
             <div class="form-group">
                 <label for="price">Price</label>
                 <div class="input-group mb-3">
                     <span class="input-group-text">€</span>
-                    <input #price=""id="price" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <input 
+                    ngModel name="price" 
+                    #price="ngModel" 
+                    id="price" 
+                    type="number" 
+                    class="form-control" 
+                    aria-label="Amount (to the nearest euro)"
+                    />
                   </div>
             </div>
         
             <div class="form-group">
                 <label for="category">Category</label>
-                <select id="category" class="form-control">
+                <select 
+                    [ngModel] name="category"
+                    id="category"
+                    class="form-control"
+                    #category="ngModel"
+                >
                     <option value=""></option>
                     <option *ngFor="let c of categories$ | async" [value]="c.key">
                         {{c.name }}
@@ -27,16 +46,28 @@
         
             <div class="form-group">
                 <label for="imageUrl">image URL</label>
-                <input #imageUrl="" id="imageUrl" type="text" class="form-control">
+                <input 
+                ngModel name="imageUrl" 
+                id="imageUrl" 
+                #imageUrl="ngModel"  
+                type="text" 
+                class="form-control"
+                multiple="multiple"
+                required
+                >
             </div>
             <button class="btn-primary">Save</button>
         </form>
     </div>
+
+
+
     <div class="col-md-6">
         <div class="card" style="width: 18rem;">
             <img [src]="imageUrl.value" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">{{title.value}}</h5>
+              <h2 class="card-title">{{ title.value }}</h2>
+              <h5 class="card-title">{{ category.value }}</h5>
               <p class="card-text">{{price.value | currency:'EUR':true }}.</p>
             </div>
           </div>

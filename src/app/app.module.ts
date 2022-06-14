@@ -1,3 +1,4 @@
+import { ProductService } from './product.service';
 import { initializeApp } from 'firebase/app';
 import { environment } from './../environments/environment';
 import { NgModule } from '@angular/core';
@@ -10,13 +11,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TakeawayComponent } from './takeaway/takeaway.component';
 import { MenuComponent } from './menu/menu.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReserverenComponent } from './reserveren/reserveren.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CartComponent } from './cart/cart.component';
-import { ProductComponent } from './product/product.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CheckOutComponent } from './check-out/check-out.component';
@@ -33,13 +32,12 @@ import { provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore } from '@angular/fire/firestore';
 import { getFirestore } from 'firebase/firestore';
 
-
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [									
       AppComponent,
-      TakeawayComponent,
       MenuComponent,
       ContactComponent,
       MenuComponent,
@@ -48,7 +46,6 @@ import { getFirestore } from 'firebase/firestore';
       ReserverenComponent,
       AboutUsComponent,
       CartComponent,
-      ProductComponent,
       FooterComponent,
       NavbarComponent,
       CheckOutComponent,
@@ -56,7 +53,7 @@ import { getFirestore } from 'firebase/firestore';
       MyordersComponent,
       LoginComponent,
       ProductFormComponent,
-      
+
    ],
   imports: [
     BrowserModule,
@@ -67,6 +64,7 @@ import { getFirestore } from 'firebase/firestore';
     AngularFireModule.initializeApp(environment.firebase),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
+    FormsModule,
     
     /* AngularFireDatabaseModule,
     AngularFireAuthModule,
@@ -79,8 +77,12 @@ import { getFirestore } from 'firebase/firestore';
     AuthService,
     AuthGuardService,
     CategoryService,
+    ProductService,
     
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  title: string = 'Example';
+
+}
