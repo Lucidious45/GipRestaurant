@@ -15,10 +15,11 @@ import { MyordersComponent } from './myorders/myorders.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuardService } from './auth-guard.service';
 import { ProductFormComponent } from './product-form/product-form.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
-  {path: "home", component: AppComponent},
+  {path: "", component: HomeComponent},
   {path: "contact", component: ContactComponent},
   {path: "aboutus", component: AboutUsComponent},
   {path: "menu", component: MenuComponent},

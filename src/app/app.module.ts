@@ -31,6 +31,7 @@ import { CategoryService } from './category.service';
 import { provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore } from '@angular/fire/firestore';
 import { getFirestore } from 'firebase/firestore';
+import { HomeComponent } from './home/home.component';
 
 import { FormsModule } from '@angular/forms';
 
@@ -53,7 +54,8 @@ import { FormsModule } from '@angular/forms';
       MyordersComponent,
       LoginComponent,
       ProductFormComponent,
-
+      HomeComponent,
+      
    ],
   imports: [
     BrowserModule,
