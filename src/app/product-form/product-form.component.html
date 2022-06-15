@@ -1,4 +1,5 @@
-<br><br><br><br>
+
+<body>
 <div class="row">
     <div  class="col-md-6">
         <form #f="ngForm" (ngSubmit)="save(f.value)">
@@ -63,13 +64,18 @@
 
 
     <div class="col-md-6">
-        <div class="card" style="width: 18rem;">
+        <div  class="card" style="width: 20rem;">
             <img [src]="imageUrl.value" class="card-img-top" alt="...">
             <div class="card-body">
-              <h2 class="card-title">{{ title.value }}</h2>
-              <h5 class="card-title">{{ category.value }}</h5>
-              <p class="card-text">{{price.value | currency:'EUR':true }}.</p>
+              <h4 class="card-title">{{ title.value }}</h4>
+              <p class="card-text">{{price.value | currency:'EUR':true }}</p>
             </div>
           </div>
+
     </div>
+
+    
+
+
 </div>
+</body>

@@ -5,8 +5,8 @@ import { CategoryService } from 'app/category.service';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { AppData } from 'app/AppData';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
-
-export interface Item { name: string; }
+import { Router, ActivatedRouteSnapshot, ActivatedRoute } from '@angular/router';
+import { take } from 'rxjs-compat/operator/take';
 
 @Component({
   selector: 'app-product-form',
@@ -15,27 +15,27 @@ export interface Item { name: string; }
 })
 export class ProductFormComponent implements OnInit {
 
-  //firestore code
-  private itemsCollection: AngularFirestoreCollection<Item>;
-  items: Observable<Item[]>;
-
-  title: string = '';
 
   
   categories$: Observable<any[]>;
+  product: any;
 
-  constructor(categoryService: CategoryService, db: AngularFireDatabase, private productService: ProductService, private afs: AngularFirestore) { 
-    this.categories$ = db.list('categories').valueChanges();
-    this.itemsCollection = afs.collection<Item>('categories');
-    this.items = this.itemsCollection.valueChanges();
-  }
 
-  addItem(product: Item) {
-    this.itemsCollection.add(product);
-  }
+  constructor(
+    private categoryService: CategoryService, 
+    private productService: ProductService, 
+    private router: Router,
+    private route: ActivatedRoute,
+    db: AngularFireDatabase, 
+    ) 
+      { 
+        this.categories$ = db.list('categories').valueChanges();
+        let id = this.route.snapshot.paramMap.get('id');
+      }
 
   save(product: any){
     this.productService.create(product);
+    this.router.navigate(['/admin/products']);
   }
 
   ngOnInit(): void {

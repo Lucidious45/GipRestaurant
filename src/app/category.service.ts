@@ -6,7 +6,6 @@ import {
 } from '@angular/fire/compat/database';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 
-
 export interface Item { name: string; }
 
 
@@ -23,6 +22,6 @@ export class CategoryService {
   
 
   GetCategories() {
-    return this.db.list('/categories',);
+    return this.db.list('/categories');
   }
 }

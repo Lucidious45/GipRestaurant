@@ -1,4 +1,5 @@
-import { ProductsComponent } from './admin/products/products.component';
+import { OverzichtComponent } from './overzicht/overzicht.component';
+import { HomeComponent } from './home/home.component';
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { OrderSuccessComponent } from './order-success/order-success.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -15,10 +16,11 @@ import { MyordersComponent } from './myorders/myorders.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuardService } from './auth-guard.service';
 import { ProductFormComponent } from './product-form/product-form.component';
+import { ProductsComponent } from './admin/products/products.component';
 
 
 const routes: Routes = [
-  {path: "home", component: AppComponent},
+  {path: "", component: HomeComponent},
   {path: "contact", component: ContactComponent},
   {path: "aboutus", component: AboutUsComponent},
   {path: "menu", component: MenuComponent},
@@ -31,13 +33,15 @@ const routes: Routes = [
   {path: "admin/products", component: ProductsComponent},
   {path: "myorders", component: MyordersComponent},
   {path: "admin/products/productform", component: ProductFormComponent},
+  {path: "admin/products/:id", component: ProductsComponent},
+  {path: "overzicht", component: OverzichtComponent},
 
 
 
 ];
 
 @NgModule({
-  declarations:[ProductsComponent],
+  declarations:[],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })

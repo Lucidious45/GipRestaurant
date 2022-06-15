@@ -31,8 +31,10 @@ import { CategoryService } from './category.service';
 import { provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore } from '@angular/fire/firestore';
 import { getFirestore } from 'firebase/firestore';
-
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { OverzichtComponent } from './overzicht/overzicht.component';
 
 
 @NgModule({
@@ -40,9 +42,6 @@ import { FormsModule } from '@angular/forms';
       AppComponent,
       MenuComponent,
       ContactComponent,
-      MenuComponent,
-      ContactComponent,
-      ReserverenComponent,
       ReserverenComponent,
       AboutUsComponent,
       CartComponent,
@@ -53,9 +52,13 @@ import { FormsModule } from '@angular/forms';
       MyordersComponent,
       LoginComponent,
       ProductFormComponent,
+      HomeComponent,
+      AdminOrdersComponent, 
+      ProductsComponent, OverzichtComponent,
 
    ],
   imports: [
+    CommonModule,
     BrowserModule,
     AngularFireAuthModule,
     AppRoutingModule,
@@ -65,6 +68,7 @@ import { FormsModule } from '@angular/forms';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     FormsModule,
+    
     
     /* AngularFireDatabaseModule,
     AngularFireAuthModule,
@@ -78,7 +82,6 @@ import { FormsModule } from '@angular/forms';
     AuthGuardService,
     CategoryService,
     ProductService,
-    
   ],
   bootstrap: [AppComponent]
 })

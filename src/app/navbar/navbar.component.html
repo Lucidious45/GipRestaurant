@@ -13,12 +13,12 @@
         </li>
         
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/takeaway">Takeaway</a>
-        </li>
+          <a class="nav-link active" aria-current="page" routerLink="/overzicht">Takeaway</a>
+        </li><!-- 
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="/cart">Shopping Cart</a>
-          
-        </li>
+        </li> -->
+
         <div class="allign-right">
           <ng-template #anonymousUser>
           <li class="nav-item">
@@ -37,12 +37,12 @@
                 {{user.displayName}}
               </button>
               <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <button routerLink="myorders" ngbDropdownItem>
+                <!-- <button routerLink="myorders" ngbDropdownItem>
                   My orders
                 </button>
                 <button routerLink="admin/orders" ngbDropdownItem>
                   Manage orders
-                </button>
+                </button> -->
                 <button routerLink="admin/products" ngbDropdownItem>
                   Manage Products</button>
                 <button (click)="logout()" ngbDropdownItem>Log Out</button>

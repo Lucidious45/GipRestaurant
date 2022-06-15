@@ -1,6 +1,32 @@
 
-<br> <br> <br>
+<body>
+  <p>
+    <a routerLink="productform" class="btn btn-primary">New Product</a>
+  </p>
+  <p>
+    <button (click)="delete()" class="btn-danger">Full Wipe</button>
+  </p>
 
 
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Category</th>
+      <th scope="col">Price</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of products$ | async">
+      <td>{{p.title}}</td>
+      <td>{{p.category}}</td>
+      <td>{{p.price | currency:'EUR':true }}</td>
+      <td>
+        <button type="button" (click)="remove()" class="btn-danger">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-<a routerLink="productform">New Product</a>
+</body>
